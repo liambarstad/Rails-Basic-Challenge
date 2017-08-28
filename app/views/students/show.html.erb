@@ -1,0 +1,12 @@
+<h1><%= @student.name %></h1>
+<ul>
+  <% @student.addresses.each do |address| %>
+    <li>
+      <a><%= address.complete_address %></a>
+    </li>
+  <% end %>
+  <a>Courses:</a>
+  <% @student.courses.each do |course| %>
+  <a><%= link_to course.name, course_path(course) %></a>
+  <% end %>
+</ul>
